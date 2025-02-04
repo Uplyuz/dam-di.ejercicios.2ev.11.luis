@@ -5,10 +5,9 @@
   </template>
   
   <script setup>
-  import ContadoresList from 'components/ContadoresList.vue'; // Importamos el componente
+  import ContadoresList from 'components/ContadoresList.vue'; 
   </script>
   
   <style scoped>
-  /* Estilos adicionales para la vista pueden ir aquí */
   </style>
   

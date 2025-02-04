@@ -6,7 +6,6 @@
         </q-card-section>
   
         <q-card-section>
-          <!-- Usamos q-table para mostrar los eventos -->
           <q-table
             :rows="contadorStore.eventos"
             :columns="columns"
@@ -28,7 +27,6 @@ import { useContadorStore } from 'stores/contadorStore';
   
   const contadorStore = useContadorStore();
   
-  // Definimos las columnas de la tabla
   const columns = [
     { name: 'event_type', label: 'Tipo de evento', align: 'left', field: row => row.eventType },
     { name: 'table', label: 'Tabla', align: 'left', field: row => row.table },

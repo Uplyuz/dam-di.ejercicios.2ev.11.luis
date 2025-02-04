@@ -17,13 +17,6 @@ import{computed} from 'vue'
 import {useContadorStore} from 'stores/contadorStore.js'
 const contadorStore= useContadorStore()
 
-/*const refrescar=()=>{
-  contadorStore.fetchCounters(); 
-}
-
-const borrarTodo=()=>{
-    contadorStore.deleteAllCounters()
-}*/
 
 const total=computed(()=>{
  return contadorStore.contadores.length

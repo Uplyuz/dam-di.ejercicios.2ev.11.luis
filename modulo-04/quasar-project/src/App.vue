@@ -8,7 +8,7 @@ import {useContadorStore} from 'stores/contadorStore.js'
 
 const contadorStore= useContadorStore()
 onMounted(() => {
-  contadorStore.fetchCounters(); // Ejecuta la función para obtener los contadores
+  contadorStore.fetchCounters(); 
   contadorStore.subscribeToChanges()
 });
 </script>

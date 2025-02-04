@@ -8,11 +8,9 @@ const supabase = createClient(
 );
 
 export const useContadorStore = defineStore('contadores', () => {
-  // Variables reactivas
   const contadores = ref([]);
   const eventos = ref([]);
 
-  // Funciones
   async function fetchCounters() {
     const { data, error } = await supabase.from('CONTADOR').select('*');
     if (error) throw error;
@@ -55,7 +53,6 @@ export const useContadorStore = defineStore('contadores', () => {
   }
 
   function subscribeToChanges() {
-    // Usamos un canal para escuchar cambios en la tabla CONTADOR
     supabase
       .channel('contador_channel')
       .on('postgres_changes', { event: '*', schema: 'public', table: 'CONTADOR' }, gestionarEventos)
@@ -64,8 +61,8 @@ export const useContadorStore = defineStore('contadores', () => {
 
   const gestionarEventos = (payload) => {
     console.log('Nuevo cambio insertado:', payload);
-    eventos.value.push(payload);  // Guardamos el evento de inserción
-    fetchCounters();  // Actualizamos los contadores en tiempo real
+    eventos.value.push(payload); 
+    fetchCounters();  
   };
 
   async function simularInsert(nombre,valor){
@@ -85,7 +82,6 @@ export const useContadorStore = defineStore('contadores', () => {
       fetchCounters(); 
     }
   }
-  // Exponer variables y funciones
   return {
     contadores,
     eventos,

@@ -40,15 +40,15 @@ const contadorStore= useContadorStore()
 
 
 const sumar = (contador) => {
-  contadorStore.incrementCounter(contador.id); // Incrementa el contador
+  contadorStore.incrementCounter(contador.id); 
 }
 
 const restar = (contador) => {
-  contadorStore.decrementCounter(contador.id); // Decrementa el contador
+  contadorStore.decrementCounter(contador.id); 
 }
 
 const borrar = (contador) => {
-  contadorStore.deleteCounter(contador.id); // Elimina el contador
+  contadorStore.deleteCounter(contador.id); 
 }
 
 </script>
