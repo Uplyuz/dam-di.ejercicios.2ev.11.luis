@@ -1,9 +1,13 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
+
+
 export const useSeguridadStore = defineStore('seguridad', () => {
+
  const nombre = ref('Luis')
  const codigo=ref('1234')
  const sesionIniciada=ref(false)
+ 
  function login() {
     if(sesionIniciada.value==false)
         { 

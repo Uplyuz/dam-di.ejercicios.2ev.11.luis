@@ -9,9 +9,6 @@ import { RouterLink , RouterView} from 'vue-router';
     <RouterLink to="/AP02V3" style="color: orange">Vista-AP02-3</RouterLink>
     <RouterLink to="/AP02V4" style="color: green">Vista-AP02-4</RouterLink>
   </nav>
-
-  
-
   <RouterView/>
 </template>
 

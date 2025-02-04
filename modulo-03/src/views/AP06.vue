@@ -4,7 +4,6 @@ import { RouterLink , RouterView} from 'vue-router';
 
 <template>
   <nav class="nav-links">
-   
     <RouterLink to="/AP06" style="color: green">Vista-AP06</RouterLink>
   </nav>
 
